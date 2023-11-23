@@ -6,10 +6,11 @@ namespace ForensicBones5.Models
     [Table("InventariosEsqueleto")]
     public class InventarioEsqueleto
     {
-        [ForeignKey("Relatorio")]
+        [Key]        
         public int InventarioEsqueletoId { get; set; }
 
         [Display(Name = "Código do Relatório")]
+        [ForeignKey("Relatorio")]
         public string RelatorioId { get; set; }
 
         [Display(Name = "Fotos do Esqueleto")]
@@ -19,5 +20,7 @@ namespace ForensicBones5.Models
         public string Observacoes { get; set; }
 
         public Relatorio Relatorio { get; set; }
+
+        //public InventarioCranio InventarioCranio { get; set; }
     }
 }

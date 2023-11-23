@@ -6,8 +6,11 @@ namespace ForensicBones5.Models
     [Table("MarcadoresCranios")]
     public class MarcadoresCranio
     {
-        [ForeignKey("InventarioCranio")]
+        [Key]
         public int MarcadoresCranioId { get; }
+
+        [ForeignKey("InventarioCranio")]
+        public int InventarioCranioId { get; set; }
 
         [Display(Name = "Crista Nucal")]
         public char CristaNucal { get; set; }
