@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ForensicBones5.Models;
 
 namespace ForensicBones5.Models
 {
@@ -14,5 +15,13 @@ namespace ForensicBones5.Models
         public DbSet<Usuario> InventariosCranio { get; set; }
 
         public DbSet<Usuario> InventarioEsqueleto { get; set; }
+
+        public DbSet<ForensicBones5.Models.InventarioCranio> InventarioCranio { get; set; }
+
+        public DbSet<ForensicBones5.Models.InventarioEsqueleto> InventarioEsqueleto_1 { get; set; }
+
+        public DbSet<ForensicBones5.Models.MarcadoresCranio> MarcadoresCranio_1 { get; set; }
+
+        public DbSet<ForensicBones5.Models.Relatorio> Relatorio { get; set; }
     }
 }

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ForensicBones5.Models.MarcadoresCranio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CristaNucal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessoMastoide)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EminenciaMentoniana)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupraOrbital)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaGlabela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacoes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventarioCranio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CristaNucal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessoMastoide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EminenciaMentoniana)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupraOrbital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaGlabela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacoes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventarioCranio.InventarioCranioId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MarcadoresCranioId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MarcadoresCranioId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MarcadoresCranioId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
